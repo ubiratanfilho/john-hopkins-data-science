@@ -5,6 +5,8 @@ pollutantmean <- function(pollutant, id=1:332, dir=path_data){
         ## dir (character) -> the files directory
         ## pollutant (character) -> the pollutant we wil return its mean ("sulfate" or "nitrate")
         ## id (vector of integers) -> the id of the files we will analyze
+        
+        path_data <- list.files("data", full.names = TRUE) # list all files in dir
         sum_pollutants = 0 # sum of pollutants (excluding NAs)
         len_pollutants = 0 # number of pollutants (excluding NAs)
         
